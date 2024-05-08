@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <p>Thân gửi {{ name }},</p>
+    <p>Đơn hàng của bạn bao gồm:</p>
+    <ul>
+        {{#each products}}
+            <li>Sản phẩm: {{this.product}} - Số lượng: {{ this.quantity }} - Giảm giá sản phẩm: {{ this.discount }}% - Đơn giá: {{ this.discountedPrice }} </li>
+        {{/each}}
+    </ul>
+    <p>Giảm giá của shop: {{ value }} đồng</p>
+    <p>Giao dịch thành công, tổng số tiền là <strong>{{ cost }}</strong></p>
+    <p>Tên tài khoản: {{ bankName }}</p>
+</body>
+</html>
